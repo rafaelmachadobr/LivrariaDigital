@@ -7,6 +7,7 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
+import java.util.Date;
 import java.util.UUID;
 
 @Entity
@@ -35,6 +36,10 @@ public class Usuario {
     @Size(min = 8, message = "A senha deve conter pelo menos 8 caracteres (excluindo espaços em branco)")
     @Pattern(regexp = "^\\S{8,}$", message = "A senha não pode conter espaços em branco")
     private String senha;
+
+    @Column(nullable = false)
+    @NotNull(message = "A data de nascimento do usuário é obrigatória")
+    private Date dataNascimento;
 
     @ManyToOne
     @JoinColumn(nullable = false)
