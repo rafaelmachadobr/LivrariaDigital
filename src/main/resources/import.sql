@@ -1,0 +1,21 @@
+-- Adicionando Categorias de livros
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Ação');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Aventura');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Romance');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Terror');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Ficção Científica');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Autoajuda');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Biografia');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Didático');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Infantil');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'HQ');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Mangá');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Religião');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Policial');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Fantasia');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Suspense');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Drama');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Crônica');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Poesia');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Conto');
+INSERT INTO categoria (id, nome) VALUES (UUID(), 'Teatro');
