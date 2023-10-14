@@ -3,6 +3,8 @@ package br.com.rafael.livrariadigital.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 import java.util.Date;
@@ -34,4 +36,10 @@ public class Autor {
     @Column(nullable = false)
     @NotBlank(message = "A nacionalidade do autor é obrigatória")
     private String nacionalidade;
+
+    @Column(nullable = false)
+    @Size(min = 8, message = "A senha deve conter pelo menos 8 caracteres (excluindo espaços em branco)")
+    @NotBlank(message = "A senha do autor é obrigatória")
+    @Pattern(regexp = "^\\S{8,}$", message = "A senha não pode conter espaços em branco")
+    private String senha;
 }

@@ -2,6 +2,7 @@ package br.com.rafael.livrariadigital.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
@@ -34,4 +35,9 @@ public class Usuario {
     @Size(min = 8, message = "A senha deve conter pelo menos 8 caracteres (excluindo espaços em branco)")
     @Pattern(regexp = "^\\S{8,}$", message = "A senha não pode conter espaços em branco")
     private String senha;
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    @NotNull(message = "O endereço do usuário é obrigatório")
+    private Endereco endereco;
 }
